@@ -9,4 +9,6 @@ export const environment = {
     storageBucket: "firestore-graph-85545.appspot.com",
     messagingSenderId: "139530172824",
     appId: "1:139530172824:web:7cce4cc3c5c95e6d8953ed"
-};
+}
+
+}
