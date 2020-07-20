@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firestore-graph-85545": {
+      "hosting": {
+        "goty": [
+          "firestore-graph-85545"
+        ]
+      }
+    }
+  }
+}
