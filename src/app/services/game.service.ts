@@ -13,7 +13,7 @@ export class GameService {
 
   constructor(private http: HttpClient) { }
 
-  getGames(){
+  getGames(){//esta esctructura no es necesaria, evita que se vuelva a hacer una peticion cada vez que navegamos entre home y goty
     if( this.games.length > 0){
       //no hay juegos
      console.log("desde el caché");

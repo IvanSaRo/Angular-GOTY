@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, Input } from '@angular/core';
 
 @Component({
   selector: 'app-horizontal-bar-graph',
@@ -7,24 +7,7 @@ import { Component, OnDestroy } from '@angular/core';
 })
 export class HorizontalBarGraphComponent implements OnDestroy {
 
-  results: any[] = [
-    {
-      "name": "Juego 1",
-      "value": 20
-    },
-    {
-      "name": "juego 2",
-      "value": 15
-    },
-    {
-      "name": "juego 3",
-      "value": 13
-    },
-    {
-      "name": "juego 4",
-      "value": 7
-    }
-  ]
+  @Input() results: any[] = [];
 
 
  
@@ -47,7 +30,7 @@ export class HorizontalBarGraphComponent implements OnDestroy {
 
   interval;
   constructor() {
-   this.interval = setInterval(() => {
+  /*  this.interval = setInterval(() => {
       console.log("itera");
 
       const newResults = [...this.results]
@@ -57,7 +40,7 @@ export class HorizontalBarGraphComponent implements OnDestroy {
       }
 
       this.results = [...newResults];
-    }, 1500)
+    }, 1500) */
   }
 
   onSelect(event) {
@@ -65,7 +48,7 @@ export class HorizontalBarGraphComponent implements OnDestroy {
   }
 
   ngOnDestroy(){
-    clearInterval(this.interval)
+    /* clearInterval(this.interval) */
   }
 
 }
