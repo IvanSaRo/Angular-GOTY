@@ -10,7 +10,9 @@
               <div class="card-body">
                 <h5 class="card-title">{{game.name}}</h5>
                 <p class="card-text">Haz click para votar a este juego</p>
-                <button class="btn btn-outline-primary btn-block">Vota</button>
+                <button class="btn btn-outline-primary btn-block"
+                        (click)="vote(game)"
+                >Vota</button>
               </div>
             </div>
         </div>

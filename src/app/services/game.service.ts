@@ -29,4 +29,9 @@ export class GameService {
 
     }
   }
+
+  vote(id: string){
+
+    return this.http.post(`${ environment.url }/api/goty/${ id }`, {}/* body vacío */)
+  }
 }

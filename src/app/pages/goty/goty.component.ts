@@ -22,4 +22,12 @@ export class GotyComponent implements OnInit {
 
   }
 
+  vote(game: Game){
+    
+    this.gameService.vote( game.id)
+        .subscribe( resp => {
+          console.log(resp);
+        })
+  }
+
 }
