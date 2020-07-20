@@ -30,17 +30,7 @@ export class HorizontalBarGraphComponent implements OnDestroy {
 
   interval;
   constructor() {
-  /*  this.interval = setInterval(() => {
-      console.log("itera");
 
-      const newResults = [...this.results]
-
-      for( let i in newResults ){
-        newResults[i].value = Math.round(Math.random() * 500)
-      }
-
-      this.results = [...newResults];
-    }, 1500) */
   }
 
   onSelect(event) {
