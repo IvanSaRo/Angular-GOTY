@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { environment  } from "../../environments/environment";
 import { Game } from '../interfaces/interfaces';
 import { of } from 'rxjs';
-import { tap } from "rxjs/operators";
+import { tap, catchError } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,7 @@ export class GameService {
       console.log("desde internet");
       return this.http.get<Game[]>(`${ environment.url}/api/goty`)
         .pipe(
-          tap(
+          tap( //este tap permite un efecto secundario, además de devolver se pasar al array la resp
             resp => this.games = resp
           )
           )
@@ -33,5 +33,8 @@ export class GameService {
   vote(id: string){
 
     return this.http.post(`${ environment.url }/api/goty/${ id }`, {}/* body vacío */)
+      .pipe(catchError( err => {return of ( err.error);
+      })
+    )
   }
 }
